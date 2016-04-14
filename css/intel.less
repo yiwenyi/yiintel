@@ -1,0 +1,75 @@
+///引入Boostrap的所有样式
+@import "bootstrap.less";
+
+//用户自定义样式
+body {
+  margin-top: @navbar-height;
+  font-size: 1.3em;
+}
+
+.logo {
+  display: inline-block;
+  width: 63px;
+  height: 42px;
+  background: url("../img/hdr-spr.png") 0 -512px no-repeat;
+  margin-top: -11px;
+}
+
+.main {
+  background: @blue-dark;
+  color: @text-color-light;
+  a {
+    color: @text-color-light;
+    &:hover {
+      color: @blue-lighter;
+    }
+  }
+}
+
+@media screen and (min-width: @screen-md-min) {
+  .main > .container > .row {
+    margin-bottom: 10px;
+  }
+
+  .login-menu {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: @screen-sm-max) and (min-width: @screen-sm-min) {
+  .main > .container > .row .row {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: @screen-xs-max) {
+  .main > .container .row .row > div {
+    margin-bottom: 10px;
+  }
+}
+
+.mask {
+  background: rgba(000, 000, 000, 0.4);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 80%;
+  left: 0;
+  padding: 0 1em;
+}
+.mask a{
+  color:@blue-light;
+}
+.mask:hover{
+  cursor: pointer;
+}
+.mask-parent {
+  position: relative;
+  overflow: hidden;
+}
+
+.set-top-0 li a,
+.set-top-1 li a,
+.set-top-2 li a{
+  padding:.5em 0;
+}
